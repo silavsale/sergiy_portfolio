@@ -1,0 +1,20 @@
+.aboutIcons {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.aboutIcon-js {
+  color: #f0db4f;
+}
+.aboutIcon-node {
+  color: #68a063;
+}
+.aboutIcon-react {
+  color: #61dbfb;
+}
+
+.aboutIcon:hover {
+  transform: scale(1.1);
+}

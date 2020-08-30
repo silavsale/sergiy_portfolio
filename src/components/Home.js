@@ -1,11 +1,16 @@
 import "@material/button/dist/mdc.button.css";
 import React from "react";
+import Typical from "react-typical";
 
 const About = () => {
   return (
     <div className="container ">
-      <p>Hi, my name is</p>
-      <h1>Sergiy Rudenko.</h1>
+      {/* <p>Hi, my name is</p>
+      <h1>Sergiy Rudenko.</h1> */}
+      <h1>
+        {/* About Me */}
+        <Typical loop={1} wrapper="b" steps={["Hi, my name is", 1500, "Sergiy Rudenko."]} />
+      </h1>
       <h2>
         I build cool thing for the web.<span className="hammer">⚒</span>
       </h2>

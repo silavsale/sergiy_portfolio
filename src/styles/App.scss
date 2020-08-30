@@ -1,3 +1,5 @@
+@import "../_variables";
+
 @font-face {
   font-family: "Material Icons";
   font-style: normal;
@@ -7,6 +9,13 @@
     url(https://example.com/MaterialIcons-Regular.woff2) format("woff2"),
     url(https://example.com/MaterialIcons-Regular.woff) format("woff"),
     url(https://example.com/MaterialIcons-Regular.ttf) format("truetype");
+}
+
+* {
+  // margin: 0;
+  // padding: 0;
+  box-sizing: border-box;
+  font-family: monospace;
 }
 
 :root {
@@ -21,7 +30,6 @@
   --bg-secondary: #141418;
   --nav-fa-primary: #b0b8ff;
   --button-theme-primary: rgba(216, 216, 216, 0.3);
-  --transition-speed: 1500ms;
 }
 
 html {
@@ -31,6 +39,7 @@ html {
 
 body {
   background-color: var(--bg-page);
+  /* background: red url(../images/dark-bgr.jpg); */
   margin: 0;
   padding: 0;
 }
@@ -51,6 +60,7 @@ body::-webkit-scrollbar-thumb {
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 200ms ease;
+  z-index: 1000;
 }
 
 p {
@@ -82,13 +92,17 @@ p {
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
-  transition: var(--transition-speed);
+  transition: $transition-speed;
 }
 
 .nav-link:hover {
   filter: grayscale(0%) opacity(1);
   background: var(--bg-secondary);
   color: var(--text-secondary);
+}
+
+.nav-link:hover i {
+  transform: scale(1.2);
 }
 
 .link-text {
@@ -110,7 +124,7 @@ p {
 
 .fa-primary,
 .fa-secondary {
-  transition: var(--transition-speed);
+  transition: $transition-speed;
 }
 
 .logo {
@@ -127,7 +141,7 @@ p {
 
 .logo .nav-link .arrows {
   transform: rotate(0deg);
-  transition: transform var(--transition-speed);
+  transition: transform $transition-speed;
 }
 
 .logo:hover .nav-link .arrows {
@@ -140,13 +154,6 @@ a {
 
 ol {
   list-style-type: none;
-}
-
-.aboutIcons {
-  padding: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
 }
 
 @media only screen and (max-width: 600px) {
@@ -200,9 +207,6 @@ ol {
     box-sizing: border-box;
   }
 
-  h1:hover {
-    color: var(--text-big-hover);
-  }
   .build {
     font-size: 35px;
     margin: 0px;
@@ -233,11 +237,7 @@ ol {
 
   .navbar:hover .link-text {
     display: inline;
-    transition: opacity var(--transition-speed);
-  }
-
-  h1:hover {
-    color: var(--text-big-hover);
+    transition: opacity $transition-speed;
   }
 
   .hammer {

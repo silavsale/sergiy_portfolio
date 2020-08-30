@@ -2,6 +2,7 @@ import { Button } from '@rmwc/button';
 import "@rmwc/button/styles";
 import React from 'react';
 import { connect } from "react-redux";
+import Typical from "react-typical";
 import * as Action from "../../actions";
 import './Settings.scss';
 
@@ -9,9 +10,13 @@ function Settings({theme, onNight, onDay}) {
     
     return (
             <div className="container ">
-                    <h1>
+                    {/* <h1>
                     Settings
-                    </h1>
+                    </h1> */}
+                <h1>
+                    {/* My Skills */}
+                    <Typical loop={1} wrapper="b" steps={[" ", 1000, "Settings"]} />
+                </h1>
                 <br/>
                 <div className='settingsCard'>
                     <div>
@@ -42,7 +47,6 @@ function Settings({theme, onNight, onDay}) {
                                     onDay()
                                     // Navbar background color
                                     document.body.style.setProperty('--bg-primary', '#456774')
-                                    // Navbar background color
                                     document.body.style.setProperty('--bg-page', '#5A8795')
                                     document.body.style.setProperty('--bg-secondary', '#375863')
                                     document.body.style.setProperty('--text-big', '#1D1D1C')

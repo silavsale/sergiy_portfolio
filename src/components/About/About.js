@@ -1,12 +1,17 @@
 import "@rmwc/button/styles";
 import React from "react";
+import Typical from "react-typical";
+import "./About.scss";
 
 const About = () => {
   return (
     <div className="container">
-      <h1>About Me</h1>
+      <h1>
+        {/* About Me */}
+        <Typical loop={1} wrapper="b" steps={["Hello", 1000, "About Me"]} />
+      </h1>
       <div>
-        <p>Hello! I'm Sergiy, a software engineer based in Montreal, Canada.</p>
+        <h2>I'm Sergiy, a software engineer based in Montreal, Canada.</h2>
         <p>
           I enjoy creating things that live on the internet, whether that be
           websites, applications, or anything in between.
@@ -24,9 +29,9 @@ const About = () => {
         <p>JavaScript (ES6+) HTML & (S)CSS React Node.js MongoDB</p>
       </div>
       <div className="aboutIcons">
-        <i class="fab fa-js-square fa-3x"></i>
-        <i class="fab fa-node fa-3x"></i>
-        <i class="fab fa-react fa-3x"></i>
+        <i className="aboutIcon aboutIcon-js fab fa-js-square fa-3x"></i>
+        <i className="aboutIcon aboutIcon-node fab fa-node fa-3x"></i>
+        <i className="aboutIcon aboutIcon-react fab fa-react fa-3x"></i>
       </div>
     </div>
   );

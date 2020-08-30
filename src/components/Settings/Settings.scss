@@ -1,3 +1,5 @@
+@import "../../_variables";
+
 .settingsCard {
   height: 260px;
   width: 250px;
@@ -28,7 +30,7 @@
 }
 
 .no-active {
-  color: var(--bg-primary);
+  color: --(bg-primary);
 }
 
 .md-36 {

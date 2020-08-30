@@ -1,3 +1,6 @@
+@import "../../_variables";
+
+
 @media only screen and (max-width: 600px) {
   .infoBarLine {
     display: none;
@@ -13,11 +16,11 @@
     color: var(--text-primary);
     writing-mode: vertical-rl;
     transform: rotate(0deg);
-    transition: transform var(--transition-speed);
+    transition: transform $transition-speed;
   }
 
   .infoBarLine:hover {
-    transition: opacity var(--transition-speed);
+    transition: opacity $transition-speed;
     transform: rotate(1deg);
   }
 

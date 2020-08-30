@@ -1,12 +1,17 @@
 import { Fab } from "@rmwc/fab";
 import "@rmwc/fab/styles";
 import React from "react";
+import Typical from "react-typical";
 import Pdf from "../../docs/RudenkoSergiy-CV2020.pdf";
 import "./Resume.scss";
 
 export default function Resume() {
   return (
     <div className="container">
+      <h1>
+          {/* My Skills */}
+          <Typical loop={1} wrapper="b" steps={[" ", 1000, "Resume"]} />
+      </h1>
       <a
         href="https://github.com/silavsale/"
         without
