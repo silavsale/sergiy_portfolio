@@ -53,6 +53,8 @@ function Settings({theme, onNight, onDay}) {
                                     document.body.style.setProperty('--text-big-hover', '#242423')
                                     document.body.style.setProperty('--text-primary', '#242423')
                                     document.body.style.setProperty('--nav-fa-primary', '#1D1D1C')
+                                    document.body.style.setProperty('--fab-color', '#1D1D1C')
+                                    // document.body.style.setProperty('--fab-bg-color', '#1D1D1C')
                                 } 
                                 if( theme) {
                                     onNight()
@@ -63,11 +65,14 @@ function Settings({theme, onNight, onDay}) {
                                     document.body.style.setProperty('--text-big-hover', 'rgb(184, 198, 241)')
                                     document.body.style.setProperty('--text-primary', 'rgb(204, 214, 246)')
                                     document.body.style.setProperty('--nav-fa-primary', '#b0b8ff')
+                                    document.body.style.setProperty('--fab-color', '#363752')
+                                    // document.body.style.setProperty('--fab-bg-color', '#ae8d18')
                                 } 
                             }
                         }
                         raised
                         icon="brightness_5"
+                        style={{color: 'var(--text-big)', backgroundColor: 'var(--bg-primary)'}}
                         >
                         theme
                     </Button>

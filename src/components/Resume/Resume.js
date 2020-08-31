@@ -17,8 +17,9 @@ export default function Resume() {
         without
         rel="noopener noreferrer"
         target="_blank"
-      >
-        <Fab className="fab fa-github fa-lg" mini />
+        >
+       
+        <Fab className="fab fa-github fa-lg" mini style={{color: 'var(--fab-color)', backgroundColor: 'var(--fab-bg-color)'}}/>
       </a>
       <p>|</p>
       <a
@@ -27,7 +28,7 @@ export default function Resume() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Fab className="fab fa-stack-overflow fa-lg" mini />
+        <Fab className="fab fa-stack-overflow fa-lg" mini style={{color: 'var(--fab-color)', backgroundColor: 'var(--fab-bg-color)'}}/>
       </a>
       <p>|</p>
       <a
@@ -36,7 +37,7 @@ export default function Resume() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Fab className="fab fa-linkedin-in fa-lg" mini />
+        <Fab className="fab fa-linkedin-in fa-lg" mini style={{color: 'var(--fab-color)', backgroundColor: 'var(--fab-bg-color)'}}/>
       </a>
       <p>|</p>
       <a
@@ -45,11 +46,11 @@ export default function Resume() {
         rel="noopener noreferrer"
         target="_blank"
       >
-        <Fab className="far fa-envelope fa-lg" mini />
+        <Fab className="far fa-envelope fa-lg" mini style={{color: 'var(--fab-color)', backgroundColor: 'var(--fab-bg-color)'}}/>
       </a>
       <p>|</p>
       <a href={Pdf} without rel="noopener noreferrer" target="_blank">
-        <Fab trailingIcon="picture_as_pdf" label="Resume" />
+        <Fab trailingIcon="picture_as_pdf" label="Resume" style={{color: 'var(--fab-color)', backgroundColor: 'var(--fab-bg-color)'}}/>
       </a>
     </div>
   );

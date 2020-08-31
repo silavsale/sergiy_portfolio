@@ -32,12 +32,12 @@ const Nav = () => {
                 <span className="link-text fa-primary">Skills</span>
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="/work" className="nav-link">
                 <i className="fas fa-code-branch fa-2x icon fa-primary"></i>
                 <span className="link-text fa-primary">Work</span>
               </Link>
-            </li>
+            </li> */}
             <li className="nav-item">
               <Link to="/resume" className="nav-link">
                 <i className="far fa-file-pdf fa-2x icon fa-primary"></i>
