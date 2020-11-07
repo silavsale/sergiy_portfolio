@@ -52,6 +52,13 @@ export default function Resume() {
       <a href={Pdf} without rel="noopener noreferrer" target="_blank">
         <Fab trailingIcon="picture_as_pdf" label="Resume" style={{color: 'var(--fab-color)', backgroundColor: 'var(--fab-bg-color)'}}/>
       </a>
+
+      <p>I like to listen this <br/> music when coding </p>
+
+      <div >
+        <iframe className="spotify-widget" title="spotify" src="https://open.spotify.com/embed/playlist/0pj2ZNW9z0664uIivPUTZf" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      </div>
+
     </div>
   );
 }
