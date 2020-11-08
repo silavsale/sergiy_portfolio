@@ -53,7 +53,7 @@ export default function Resume() {
         <Fab trailingIcon="picture_as_pdf" label="Resume" style={{color: 'var(--fab-color)', backgroundColor: 'var(--fab-bg-color)'}}/>
       </a>
 
-      <p>I like to listen this <br/> music when coding </p>
+      <p>I like to listen to this <br/> music while coding</p>
 
       <div >
         <iframe className="spotify-widget" title="spotify" src="https://open.spotify.com/embed/playlist/0pj2ZNW9z0664uIivPUTZf" width="300" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>

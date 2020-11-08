@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import { BrowserRouter as Router, Link, Route, Switch } from "react-router-dom";
 import About from "./About/About";
 import Home from "./Home";
 import Resume from "./Resume/Resume";
 import Settings from "./Settings/Settings";
 import Skills from "./Skills/Skills";
+import Spinner from "./Spinner/Spinner"
 import Work from "./Work";
 
 const Nav = () => {
@@ -54,8 +55,9 @@ const Nav = () => {
         </nav>
         <Switch>
           <Route exact path="/">
+          {/* <Spinner/> */}
             <Home />
-          </Route>
+          </Route> 
           <Route path="/about">
             <About />
           </Route>
