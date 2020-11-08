@@ -1,47 +1,17 @@
-import { Button } from '@rmwc/button';
-import "@rmwc/button/styles";
-import React from 'react';
+import React, {useState, } from 'react'
 import { connect } from "react-redux";
-import Typical from "react-typical";
-import ThemeMode from '../ThemeMode/ThemeMode'
 import * as Action from "../../actions";
-import './Settings.scss';
+import './ThemeMode.scss'
 
-function Settings({theme, onNight, onDay}) {
-    
+const ThemeMode = ({theme, onNight, onDay}) => {
+    const [darkMode, setDarkMode] = useState(false);
     return (
-            <div className="container ">
-                <h1>
-                    <Typical loop={1} wrapper="b" steps={[" ", 1000, "Settings"]} />
-                </h1>
-                <br/>
-                <div className='settingsCard'>
-                    {/* <div>
-                        {!theme ?
-                            <div className="night theme-icons">
-                                <span className="material-icons active md-36">
-                                brightness_2
-                                </span>
-                                <span className="material-icons day no-active md-36">
-                                wb_sunny
-                                </span>
-                            </div>
-                            :
-                            <div className="day theme-icons">
-                                <span className="material-icons night no-active md-36">
-                                brightness_2
-                                </span>
-                                <span className="material-icons day active md-36">
-                                wb_sunny
-                                </span>
-                            </div>
-                        }
-                    </div> */}
-                    
-                    <ThemeMode/>
-                    {/* <br/>
-                    <Button
-                        onClick={()=> {
+        <>
+                <div className="container">
+                    <span>{theme ? 'LIGHT' : 'DARK'}</span>
+                    <div className="switch-checkbox">
+                        <label className="switch">
+                        <input type="checkbox" onChange={()=> {
                                 if(!theme ) {
                                     onDay()
                                     // Navbar background color
@@ -67,17 +37,13 @@ function Settings({theme, onNight, onDay}) {
                                     document.body.style.setProperty('--fab-color', '#363752')
                                     // document.body.style.setProperty('--fab-bg-color', '#ae8d18')
                                 } 
-                            }
-                        }
-                        raised
-                        icon="brightness_5"
-                        style={{color: 'var(--text-big)', backgroundColor: 'var(--bg-primary)'}}
-                        >
-                        theme
-                    </Button> */}
+                            }} />
+                        <span className="slider round"> </span>
+                        </label>
+                    </div>
                 </div>
-            </div>
-    )
+        </>
+    );
 }
 
 const mapDispatchToProps = dispatch => {
@@ -92,4 +58,4 @@ const mapStateToProps = state => {
 };
 
 
-export default connect(mapStateToProps, mapDispatchToProps)(Settings);
+export default connect(mapStateToProps, mapDispatchToProps)(ThemeMode)
